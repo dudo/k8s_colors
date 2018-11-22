@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blue
+spec:
+  selector:
+    matchLabels:
+      app: blue
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: blue
+    spec:
+      restartPolicy: Always
+      containers:
+      - resources: {}
+        imagePullPolicy: IfNotPresent
+        image: dudo/colors:blue
+        name: blue
+        ports:
+        - containerPort: 80
