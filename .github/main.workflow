@@ -7,7 +7,7 @@ workflow "Create image" {
 
 action "docker build" {
   uses = "actions/docker/cli@6495e70"
-  args = "[\"build\", \"-t\", \"base\", \".\"]"
+  args = "build -t base ."
 }
 
 action "docker tag" {
@@ -16,7 +16,7 @@ action "docker tag" {
   env = {
     IMAGE_NAME = "dudo/colors"
   }
-  args = "[\"base\", $IMAGE_NAME]"
+  args = "base, $IMAGE_NAME"
 }
 
 action "docker login" {
@@ -28,7 +28,7 @@ action "docker login" {
 action "docker push" {
   uses = "actions/docker/cli@6495e70"
   needs = ["docker login"]
-  args = "[\"push\", \"$IMAGE_NAME\"]"
+  args = "push $IMAGE_NAME"
   env = {
     IMAGE_NAME = "dudo/colors"
   }
