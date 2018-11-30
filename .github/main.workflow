@@ -7,7 +7,7 @@ workflow "Create image" {
 
 action "docker build" {
   uses = "actions/docker/cli@6495e70"
-  args = "build -t base ."
+  args = "build -t base $GITHUB_WORKSPACE"
 }
 
 action "docker tag" {
