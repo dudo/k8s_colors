@@ -16,9 +16,13 @@ spec:
     spec:
       restartPolicy: Always
       containers:
-      - resources: {}
+      - resources:
+          requests: {}
+          limits:
+            cpu: 1
+            memory: 250M
         imagePullPolicy: IfNotPresent
-        image: dudo/colors:blue
+        image: dudo/colors:blue-margin
         name: blue
         ports:
         - containerPort: 80
