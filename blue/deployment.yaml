@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -24,7 +25,7 @@ spec:
             cpu: 1
             memory: 250M
         imagePullPolicy: Always
-        image: dudo/colors:blue
+        image: dudo/colors:blue-margin
         name: blue
         ports:
         - containerPort: 80
