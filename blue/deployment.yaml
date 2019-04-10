@@ -22,7 +22,7 @@ spec:
             cpu: 1
             memory: 250M
         imagePullPolicy: IfNotPresent
-        image: dudo/colors:blue-margin
+        image: dudo/colors:blue
         name: blue
         ports:
         - containerPort: 80
