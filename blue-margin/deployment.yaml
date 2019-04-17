@@ -22,7 +22,7 @@ spec:
           requests: {}
           limits:
             cpu: 250m
-            memory: 250m
+            memory: 250M
         imagePullPolicy: Always
         image: dudo/colors:blue-margin
         name: blue
