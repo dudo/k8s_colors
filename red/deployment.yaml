@@ -2,18 +2,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: blue
+  name: red
 spec:
   selector:
     matchLabels:
-      app: blue
+      app: red
   replicas: 1
   strategy:
     type: RollingUpdate
   template:
     metadata:
       labels:
-        app: blue
+        app: red
     spec:
       restartPolicy: Always
       containers:
@@ -23,7 +23,7 @@ spec:
             cpu: 250m
             memory: 250M
         imagePullPolicy: Always
-        image: dudo/colors:blue
-        name: blue
+        image: dudo/colors:red
+        name: red
         ports:
         - containerPort: 80

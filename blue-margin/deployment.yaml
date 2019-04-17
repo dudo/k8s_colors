@@ -1,8 +1,9 @@
 ---
-apiVersion: apps/v1
 kind: Deployment
+apiVersion: apps/v1
 metadata:
   name: blue
+  namespace: margin
 spec:
   selector:
     matchLabels:
@@ -21,9 +22,9 @@ spec:
           requests: {}
           limits:
             cpu: 250m
-            memory: 250M
+            memory: 250m
         imagePullPolicy: Always
-        image: dudo/colors:blue
+        image: dudo/colors:blue-margin
         name: blue
         ports:
         - containerPort: 80
