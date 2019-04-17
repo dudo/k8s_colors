@@ -2,12 +2,12 @@ kind: Ingress
 apiVersion: extensions/v1beta1
 metadata:
   name: blue
-  namespace: margin
+  namespace: feature-margin
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: margin.localhost
+  - host: feature-margin.localhost
     http:
       paths:
       - path: /blue

@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: red
-  namespace: margin
+  namespace: feature-margin
 spec:
   type: ExternalName
   externalName: red.default.svc.cluster.local

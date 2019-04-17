@@ -3,7 +3,7 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: blue
-  namespace: margin
+  namespace: feature-margin
 spec:
   selector:
     matchLabels:
@@ -24,7 +24,7 @@ spec:
             cpu: 250m
             memory: 250M
         imagePullPolicy: Always
-        image: dudo/colors:blue-margin
+        image: dudo/blue:dc465cd
         name: blue
         ports:
         - containerPort: 80

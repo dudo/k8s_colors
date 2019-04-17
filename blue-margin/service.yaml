@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: blue
-  namespace: margin
+  namespace: feature-margin
 spec:
   type: NodePort
   selector:
