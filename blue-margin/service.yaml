@@ -4,5 +4,8 @@ metadata:
   name: blue
   namespace: margin
 spec:
-  type: ExternalName
-  externalName: blue.margin.svc.cluster.local
+  type: NodePort
+  selector:
+    app: blue
+  ports:
+  - port: 80
