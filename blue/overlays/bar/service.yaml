@@ -2,8 +2,8 @@
 kind: Service
 apiVersion: v1
 metadata:
-  :name: blue
-  :namespace: bar
+  name: blue
+  namespace: bar
 spec:
-  :type: ExternalName
-  :externalName: blue.default.svc.cluster.local
+  type: ExternalName
+  externalName: blue.default.svc.cluster.local
