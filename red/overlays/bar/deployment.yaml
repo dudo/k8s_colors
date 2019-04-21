@@ -18,13 +18,13 @@ spec:
     spec:
       restartPolicy: Always
       containers:
-      - :resources:
-          :requests: {}
-          :limits:
-            :cpu: 250m
-            :memory: 250M
-        :imagePullPolicy: Always
-        :image: dudo/red:asdf
-        :name: red
-        :ports:
-        - :containerPort: 80
+      - resources:
+          requests: {}
+          limits:
+            cpu: 250m
+            memory: 250M
+        imagePullPolicy: Always
+        image: dudo/red:asdf
+        name: red
+        ports:
+        - containerPort: 80

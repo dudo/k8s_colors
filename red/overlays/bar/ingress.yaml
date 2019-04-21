@@ -8,10 +8,10 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: "/"
 spec:
   rules:
-  - :host: bar.localhost
-    :http:
-      :paths:
-      - :path: "/red"
-        :backend:
-          :serviceName: red
-          :servicePort: 80
+  - host: bar.localhost
+    http:
+      paths:
+      - path: "/red"
+        backend:
+          serviceName: red
+          servicePort: 80
