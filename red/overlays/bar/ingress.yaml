@@ -1,12 +1,12 @@
 ---
-:kind: Ingress
-:apiVersion: extensions/v1beta1
-:metadata:
+kind: Ingress
+apiVersion: extensions/v1beta1
+metadata:
   :name: red
   :namespace: bar
   :annotations:
     nginx.ingress.kubernetes.io/rewrite-target: "/"
-:spec:
+spec:
   :rules:
   - :host: bar.localhost
     :http:

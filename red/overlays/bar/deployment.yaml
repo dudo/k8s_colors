@@ -1,10 +1,10 @@
 ---
-:kind: Deployment
-:apiVersion: apps/v1
-:metadata:
+kind: Deployment
+apiVersion: apps/v1
+metadata:
   :name: red
   :namespace: bar
-:spec:
+spec:
   :selector:
     :matchLabels:
       :app: red
