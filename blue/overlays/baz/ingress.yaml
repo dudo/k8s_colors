@@ -1,0 +1,17 @@
+---
+kind: Ingress
+apiVersion: extensions/v1beta1
+metadata:
+  name: blue
+  namespace: baz
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: "/"
+spec:
+  rules:
+  - host: baz.localhost
+    http:
+      paths:
+      - path: "/blue"
+        backend:
+          serviceName: blue
+          servicePort: 80
