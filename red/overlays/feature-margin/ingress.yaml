@@ -1,0 +1,17 @@
+---
+kind: Ingress
+apiVersion: extensions/v1beta1
+metadata:
+  name: red
+  namespace: feature-margin
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: "/"
+spec:
+  rules:
+  - host: feature-margin.localhost
+    http:
+      paths:
+      - path: "/red"
+        backend:
+          serviceName: red
+          servicePort: 80
