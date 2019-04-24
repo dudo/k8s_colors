@@ -5,5 +5,8 @@ metadata:
   name: red
   namespace: feature-margin
 spec:
-  type: ExternalName
-  externalName: red.default.svc.cluster.local
+  type: NodePort
+  selector:
+    app: red
+  ports:
+  - port: 80
