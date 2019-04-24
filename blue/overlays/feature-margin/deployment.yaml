@@ -24,7 +24,7 @@ spec:
             cpu: 250m
             memory: 250M
         imagePullPolicy: Always
-        image: dudo/blue:455370c
+        image: dudo/blue:cb426d9
         name: blue
         ports:
         - containerPort: 80
