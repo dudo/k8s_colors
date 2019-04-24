@@ -1,0 +1,30 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: red
+  namespace: feature-margin
+spec:
+  selector:
+    matchLabels:
+      app: red
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: red
+    spec:
+      restartPolicy: Always
+      containers:
+      - resources:
+          requests: {}
+          limits:
+            cpu: 250m
+            memory: 250M
+        imagePullPolicy: Always
+        image: dudo/red:bf0b10d
+        name: red
+        ports:
+        - containerPort: 80
