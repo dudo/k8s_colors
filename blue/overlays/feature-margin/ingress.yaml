@@ -1,4 +1,7 @@
 ---
+- op: add
+  path: /metadata/namespace
+  value: margin
 - op: replace
   path: /spec/rules/0/host
   value: margin.localhost
