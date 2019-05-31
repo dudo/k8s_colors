@@ -2,5 +2,7 @@
 version: 1
 patchUpdated:
   generators:
-  - command: kustomize build .
-  
+  - command: kustomize build ./blue/base
+  - command: kustomize build ./red/base
+  - command: kustomize build ./blue/overlays/feature-margin
+  - command: kustomize build ./red/overlays/feature-margin
