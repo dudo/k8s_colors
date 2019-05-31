@@ -1,0 +1,23 @@
+---
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+namePrefix: stage-
+commonLabels:
+  app: blue
+bases:
+- ../../base/
+patches:
+- service.yaml
+patchesJson6902:
+- target:
+    kind: Deployment
+    group: apps
+    version: v1
+    name: blue
+  path: deployment.yaml
+- target:
+    kind: Ingress
+    group: extensions
+    version: v1beta1
+    name: blue
+  path: ingress.yaml
