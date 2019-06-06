@@ -3,7 +3,8 @@ kind: Service
 apiVersion: v1
 metadata:
   name: red
-  namespace: margin
 spec:
   type: ExternalName
   externalName: red.default.svc.cluster.local
+  selector: {}
+  ports: []

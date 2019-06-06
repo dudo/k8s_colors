@@ -1,20 +1,20 @@
 ---
 kind: Kustomization
 apiVersion: kustomize.config.k8s.io/v1beta1
+
 namespace: margin
+
+images:
+- name: dudo/blue
+  newTag: 00aff0f
+
 resources:
 - namespace.yaml
+
 bases:
-- ../../base/
-patches:
-- service.yaml
+- ../development
+
 patchesJson6902:
-- target:
-    kind: Deployment
-    group: apps
-    version: v1
-    name: blue
-  path: deployment.yaml
 - target:
     kind: Ingress
     group: extensions
