@@ -6,3 +6,5 @@ commandUpdated:
   - command: kustomize build ./red/overlays/development
   - command: kustomize build ./blue/overlays/feature-margin
   - command: kustomize build ./red/overlays/feature-margin
+  - command: kustomize build ./blue/overlays/test
+  - command: kustomize build ./red/overlays/test
