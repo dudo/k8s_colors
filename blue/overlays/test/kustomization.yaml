@@ -7,8 +7,7 @@ images:
   newTag: latest
 bases:
 - "../../base/"
-resources:
-- namespace.yaml
+resources: 
 patches: []
 patchesJson6902:
 - target:
