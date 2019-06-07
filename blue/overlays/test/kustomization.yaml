@@ -1,0 +1,19 @@
+---
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+namespace: test
+images:
+- name: dudo/blue
+  newTag: latest
+bases:
+- "../../base/"
+resources:
+- namespace.yaml
+patches: []
+patchesJson6902:
+- target:
+    kind: Ingress
+    group: extensions
+    version: v1beta1
+    name: blue
+  path: ingress.yaml
