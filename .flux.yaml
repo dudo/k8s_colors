@@ -1,4 +1,6 @@
 ---
 version: 1
 commandUpdated:
-  generators: []
+  generators:
+  - command: kustomize build ./blue/overlays/test
+  - command: kustomize build ./red/overlays/test
