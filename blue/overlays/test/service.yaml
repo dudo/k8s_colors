@@ -1,8 +1,0 @@
----
-kind: Service
-apiVersion: v1
-metadata:
-  name: blue
-spec:
-  type: ExternalName
-  externalName: blue.default.svc.cluster.local
