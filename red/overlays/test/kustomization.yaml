@@ -13,4 +13,6 @@ patchesJson6902:
     version: v1beta1
     name: red
   path: ingress.yaml
-images: []
+images:
+- name: dudo/red
+  newTag: latest
