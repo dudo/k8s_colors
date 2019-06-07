@@ -5,8 +5,7 @@ namespace: test
 bases:
 - "../../base/"
 resources: []
-patches:
-- service.yaml
+patches: []
 patchesJson6902:
 - target:
     kind: Ingress
@@ -14,4 +13,6 @@ patchesJson6902:
     version: v1beta1
     name: blue
   path: ingress.yaml
-images: []
+images:
+- name: dudo/blue
+  newTag: latest
