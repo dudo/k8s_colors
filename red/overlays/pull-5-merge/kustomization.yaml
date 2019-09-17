@@ -15,4 +15,4 @@ patchesJson6902:
   path: ingress.yaml
 images:
 - name: dudo/red
-  newTag: f6eecfd
+  newTag: 1b5a404
