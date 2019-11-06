@@ -4,5 +4,3 @@ commandUpdated:
   generators:
   - command: kustomize build ./blue/base
   - command: kustomize build ./red/base
-  - command: kustomize build ./blue/overlays/pull-4-merge
-  - command: kustomize build ./red/overlays/pull-4-merge
