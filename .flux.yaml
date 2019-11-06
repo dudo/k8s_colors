@@ -2,7 +2,3 @@
 version: 1
 commandUpdated:
   generators:
-  - command: kustomize build ./blue/overlays/development
-  - command: kustomize build ./red/overlays/development
-  - command: kustomize build ./blue/overlays/feature-margin
-  - command: kustomize build ./red/overlays/feature-margin
