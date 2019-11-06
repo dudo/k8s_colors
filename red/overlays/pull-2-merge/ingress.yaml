@@ -1,4 +1,0 @@
----
-- op: replace
-  path: "/spec/rules/0/host"
-  value: pull-2-merge.localhost
