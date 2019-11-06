@@ -4,3 +4,5 @@ commandUpdated:
   generators:
   - command: kustomize build ./blue/base
   - command: kustomize build ./red/base
+  - command: kustomize build ./blue/overlays/$GITHUB_HEAD_REF
+  - command: kustomize build ./red/overlays/$GITHUB_HEAD_REF
