@@ -1,4 +1,0 @@
----
-- op: replace
-  path: "/spec/rules/0/host"
-  value: "$GITHUB_HEAD_REF.localhost"
