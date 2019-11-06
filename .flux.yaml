@@ -1,4 +1,6 @@
 ---
 version: 1
 commandUpdated:
-  generators: []
+  generators:
+  - command: kustomize build ./blue/base
+  - command: kustomize build ./red/base
