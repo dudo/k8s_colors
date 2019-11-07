@@ -4,5 +4,3 @@ commandUpdated:
   generators:
   - command: kustomize build ./blue/base
   - command: kustomize build ./red/base
-  - command: kustomize build ./blue/overlays/feature-conditional_run
-  - command: kustomize build ./red/overlays/feature-conditional_run
