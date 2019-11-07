@@ -1,0 +1,4 @@
+---
+- op: replace
+  path: "/spec/rules/0/host"
+  value: feature-conditional_run.localhost
