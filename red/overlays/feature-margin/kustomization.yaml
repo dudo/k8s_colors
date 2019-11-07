@@ -5,8 +5,7 @@ namespace: feature-margin
 bases:
 - "../../base/"
 resources: []
-patches:
-- service.yaml
+patches: []
 patchesJson6902:
 - target:
     kind: Ingress
@@ -14,4 +13,6 @@ patchesJson6902:
     version: v1beta1
     name: red
   path: ingress.yaml
-images: []
+images:
+- name: dudo/red
+  newTag: 1cedc73
