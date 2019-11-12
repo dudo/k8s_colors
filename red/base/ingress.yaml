@@ -14,4 +14,3 @@ spec:
         backend:
           serviceName: red
           servicePort: 80
-          
