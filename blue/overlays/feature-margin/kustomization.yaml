@@ -8,7 +8,7 @@ patches: []
 patchesJson6902:
 - target:
     kind: Ingress
-    group: extensions
+    group: networking.k8s.io
     version: v1beta1
     name: blue
   path: ingress.yaml
