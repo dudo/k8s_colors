@@ -1,0 +1,18 @@
+---
+kind: Kustomization
+namespace: feature-margin
+bases:
+- "../../base/"
+resources:
+- namespace.yaml
+patches: []
+patchesJson6902:
+- target:
+    kind: Ingress
+    group: networking.k8s.io
+    version: v1beta1
+    name: blue
+  path: ingress.yaml
+images:
+- name: dudo/blue
+  newTag: b4ccd8a
